@@ -32,7 +32,7 @@
 
 - name: Install requires pip packages
   pip:
-    name: "{{ stash_requires_pip_packages }}"
+    name: "python-keystoneclient"
     state: "{{ stash_pip_package_state }}"
   register: install_packages
   until: install_packages|success
