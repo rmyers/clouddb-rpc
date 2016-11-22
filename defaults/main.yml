@@ -1,0 +1,18 @@
+---
+## Stash Auth
+stash_service_region: RegionOne
+stash_service_project_name: "service"
+stash_service_project_domain_id: default
+stash_service_user_domain_id: default
+stash_service_user_name: "stash"
+stash_service_role_name: "admin"
+
+# Service Registry
+stash_service_name: stash
+stash_service_type: database
+stash_service_proto: http
+stash_service_publicuri_proto: "{{ openstack_service_publicuri_proto | default(stash_service_proto) }}"
+stash_service_port: 8778
+stash_service_description: "Stash Database Service"
+stash_service_publicuri: "{{ stash_service_publicuri_proto }}://{{ external_lb_vip_address }}:{{ stash_service_port }}"
+stash_service_publicurl: "{{ stash_service_publicuri }}/v1.0/%(tenant_id)s"
