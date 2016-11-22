@@ -1,5 +1,6 @@
 ---
 stash_service_in_ldap: false
+stash_service_password: "Password123"
 ## Stash Auth
 stash_service_region: RegionOne
 stash_service_project_name: "service"
