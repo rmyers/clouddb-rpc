@@ -20,7 +20,4 @@ stash_service_publicurl: "{{ stash_service_publicuri }}/v1.0/%(tenant_id)s"
 stash_package_state: "latest"
 stash_pip_package_state: "latest"
 stash_requires_pip_packages:
-  - virtualenv
-  - virtualenv-tools
-  - python-keystoneclient # Keystoneclient needed to OSA keystone lib
-  - httplib2
+  - python-keystoneclient
