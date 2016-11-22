@@ -1,4 +1,5 @@
 ---
+stash_service_in_ldap: false
 ## Stash Auth
 stash_service_region: RegionOne
 stash_service_project_name: "service"
