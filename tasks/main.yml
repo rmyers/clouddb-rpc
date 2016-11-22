@@ -1,5 +1,5 @@
 ---
-# Copyright 2014, Rackspace US, Inc.
+# Copyright 2016, Rackspace US, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,6 +12,12 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+- include: stash_install_apt.yml
+  when: ansible_pkg_mgr == 'apt'
+
+- include: stash_install_yum.yml
+  when: ansible_pkg_mgr == 'yum'
 
 - name: Install requires pip packages
   pip:

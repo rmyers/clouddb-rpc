@@ -17,6 +17,7 @@ stash_service_description: "Stash Database Service"
 stash_service_publicuri: "{{ stash_service_publicuri_proto }}://{{ external_lb_vip_address }}:{{ stash_service_port }}"
 stash_service_publicurl: "{{ stash_service_publicuri }}/v1.0/%(tenant_id)s"
 
+stash_package_state: "latest"
 stash_pip_package_state: "latest"
 stash_requires_pip_packages:
   - virtualenv
