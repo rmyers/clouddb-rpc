@@ -122,7 +122,7 @@
     endpoint_list:
       - url: "{{ stash_service_publicurl }}"
         interface: "public"
-      - url: "{{ stash_service_publicurl }}"
+      - url: "{{ stash_service_internalurl }}"
         interface: "internal"
   register: add_service
   until: add_service|success
