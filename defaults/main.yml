@@ -19,7 +19,7 @@ stash_service_port: 8779
 stash_service_description: "Stash Database Service"
 stash_service_publicuri: "{{ stash_service_publicuri_proto }}://{{ external_lb_vip_address }}:{{ stash_service_port }}"
 stash_service_publicurl: "{{ stash_service_publicuri }}/v1.0/%(tenant_id)s"
-stash_service_internaluri: "{{ stash_service_internaluri_proto }}://{{ internal_lb_vip_address }}:{{ stash_service_port }}"
+stash_service_internaluri: "{{ stash_service_internaluri_proto }}://{{ ansible_eth1.ipv4.address }}:{{ stash_service_port }}"
 stash_service_internalurl: "{{ stash_service_internaluri }}/v1.0/%(tenant_id)s"
 
 stash_package_state: "latest"
