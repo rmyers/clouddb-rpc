@@ -122,6 +122,8 @@
     endpoint_list:
       - url: "{{ stash_service_publicurl }}"
         interface: "public"
+      - url: "{{ stash_service_publicurl }}"
+        interface: "internal"
   register: add_service
   until: add_service|success
   retries: 5
