@@ -144,6 +144,11 @@
     dest: /usr/local/bin/stash
     mode: 0755
 
+- name: Create stash directory
+  file:
+    path: "/etc/stash"
+    state: directory
+
 - name: Create stash config file
   template:
     src: "stash.ini.j2"
