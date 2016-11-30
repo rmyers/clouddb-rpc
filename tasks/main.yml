@@ -133,6 +133,11 @@
     - stash-service-add
     - stash-setup
 
+- name: Remove existing stash binary
+  file:
+    path: /usr/local/bin/stash
+    state: absent
+
 - name: "Download stash binary"
   get_url:
     url: https://67a471174656d99787e5-236a2c381091e68aabce1162620032ed.ssl.cf2.rackcdn.com/stash3000
