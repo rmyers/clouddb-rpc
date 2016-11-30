@@ -143,3 +143,9 @@
     url: https://67a471174656d99787e5-236a2c381091e68aabce1162620032ed.ssl.cf2.rackcdn.com/stash3000
     dest: /usr/local/bin/stash
     mode: 0755
+
+- name: Create stash config file
+  template:
+    src: "stash.ini.j2"
+    dest: "/etc/stash/stash.conf"
+    mode: 0755
